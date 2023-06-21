@@ -1,0 +1,28 @@
+.movie__row {
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.movie__row::-webkit-scrollbar {
+  display: none;
+}
+
+.movie__card {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-self: normal; */
+  /* align-items: center; */
+  align-self: normal;
+  flex-direction: column;
+ 
+}
+
+.movie__type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail__list {
+  padding-left: 0px !important;
+}
