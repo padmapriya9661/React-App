@@ -1,8 +1,6 @@
 import { ActionTypes } from "../Constants/actionTypes";
-
 const initialValue = [];
 const initialSelectedValue = [];
-
 export const contactReducer = (state = initialValue, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_CONTACTS:
@@ -11,7 +9,6 @@ export const contactReducer = (state = initialValue, { type, payload }) => {
       return state;
   }
 };
-
 export const selectedContactReducer = (
   state = initialSelectedValue,
   { type, payload }

@@ -1,7 +1,6 @@
 import React from "react"
 import "./Header.css"
 import { Link } from "react-router-dom"
-
 const Header1 = () => {
     return (
         <>
@@ -15,7 +14,5 @@ const Header1 = () => {
             </div>
         </div>
         </>
-    )
-}
-
+    )}
 export default Header1
