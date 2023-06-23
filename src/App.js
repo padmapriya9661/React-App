@@ -9,24 +9,21 @@ import { Provider } from "react-redux";
 import store from "./Redux/store";
 import { HomePage } from "./Components/HomePage/HomePage";
 import { MoviesManager } from "./Components/Movies/MoviesManager";
-
-
 function App() {
   return (
     <div className="App">
       <Provider store={store}>
         <UserContextProvider>
           <Header />
+
           <Routes>
             <Route path="/" element={<SignIn />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/home/*" element={<ContactManager />}></Route>
             <Route path="/signup" element={<SignUp />} />
-                {/* <Route path="/movies" element={<Home />}></Route>
-                <Route path="movie/:id" element={<Movie />}></Route>
-                <Route path="movies/:type" element={<MovieList />}></Route>  */}
             <Route path="/movie/*" element={<MoviesManager />}></Route>
           </Routes>
+          
         </UserContextProvider>
       </Provider>
     </div>
