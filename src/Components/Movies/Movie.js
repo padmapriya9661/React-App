@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import { MovieList } from "./MovieList";
+import { MovieList } from "./MList";
 import LocalMoviesRoundedIcon from "@mui/icons-material/LocalMoviesRounded";
 
-export const AddMovies = (props) => {
+export const Movie = (props) => {
   const { movies } = props;
 
   return (

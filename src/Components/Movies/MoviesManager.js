@@ -1,19 +1,19 @@
 import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { MovieHeader } from "./MovieListHeading";
+import { MovieHeader } from "./MovieHeading";
 import "./styles.css";
-import { useGetMoviesQuery } from "../services/movieApi";
-import { MovieDetails } from "./MovieDetails";
+import { useGetMoviesQuery } from "../services/moviertkApi";
+import { MDetails } from "./MDetails";
 import { AddToCart } from "./AddToCart";
-import { AddMovies } from "./AddMovies";
+import { Movie } from "./Movie";
 import useBounce from "../../bounce/useBounce";
 
-export const MovieManager = () => {
+export const MoviesManager = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
-  const debouncedValue = useBounce(query, 500);
-  const { data } = useGetMoviesQuery(debouncedValue);
+  const bouncedValue = useBounce(query, 500);
+  const { data } = useGetMoviesQuery(bouncedValue);
 
   useEffect(() => {
     setMovies(data?.Search);
@@ -25,9 +25,9 @@ export const MovieManager = () => {
         <Routes>
           <Route
             path="/movielist"
-            element={<AddMovies movies={movies} />}
+            element={<Movie movies={movies} />}
           ></Route>
-          <Route path="/details/:id" element={<MovieDetails />}></Route>
+          <Route path="/details/:id" element={<MDetails />}></Route>
           <Route path="/cart" element={<AddToCart />}></Route>
         </Routes>
       </Container>

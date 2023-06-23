@@ -15,7 +15,6 @@ const MovieListHeading = (props) => {
     </div>
   );
 };
-
 export const MovieHeader = (props) => {
   const movieList = useSelector(selectAllMovies);
   const [isOpenCart, setIsOpenCart] = useState(false);
@@ -27,15 +26,15 @@ export const MovieHeader = (props) => {
       padding: "0 4px",
     },
   }));
-
   const showCart = () => {
     setIsOpenCart(true);
   };
   const closeCart = () => {
     setIsOpenCart(false);
   };
-
   const { query, setQuery } = props;
+  
+  
   return (
     <>
       <Box
@@ -45,7 +44,6 @@ export const MovieHeader = (props) => {
         m={3}
       >
         <MovieListHeading heading="Movies Manager" />
-
         <SearchBar query={query} setQuery={setQuery} />
         <Box>
           <IconButton aria-label="cart">

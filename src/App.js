@@ -11,7 +11,7 @@ import { HomePage } from "./Components/HomePage/HomePage";
 // import Home from './Movies/pages/home/home';
 // import MovieList from './Movies/components/movieList/movieList';
 // import Movie from './Movies/pages/movieDetail/movie';
-import { MovieManager } from "./Components/Movies/MovieManager";
+import { MoviesManager } from "./Components/Movies/MoviesManager";
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
                 {/* <Route path="/movies" element={<Home />}></Route>
                 <Route path="movie/:id" element={<Movie />}></Route>
                 <Route path="movies/:type" element={<MovieList />}></Route>  */}
-            <Route path="/movie/*" element={<MovieManager />}></Route>
+            <Route path="/movie/*" element={<MoviesManager />}></Route>
           </Routes>
         </UserContextProvider>
       </Provider>

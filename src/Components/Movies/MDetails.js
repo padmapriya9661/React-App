@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useGetMovieByIdQuery } from "../services/movieApi";
+import { useGetMovieByIdQuery } from "../services/moviertkApi";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import {
   Box,
@@ -23,7 +23,7 @@ import {
 import CircularProgress from "@mui/material/CircularProgress";
 import { successMsg } from "../Auth/LoginError";
 
-export const MovieDetails = () => {
+export const MDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [currentMovieDetail, setCurrentMovieDetail] = useState([]);

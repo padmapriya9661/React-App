@@ -1,21 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialState = {
-  addedMovies: [],
+const startState = {
+  cartMovies: [],
 
 };
 const movieSlice = createSlice({
 
   name: "movie",
-  initialState: initialState,
+  initialState: startState,
   
   reducers: {
     addMoviesToCart(state, action) {
-      state.addedMovies.push(action.payload);
+      state.cartMovies.push(action.payload);
     },
 
     removeMovieFromCart(state, action) {
       
-      state.addedMovies = state.addedMovies.filter(
+      state.cartMovies = state.cartMovies.filter(
         (movie) => movie.imdbID !== action.payload
 
         );
@@ -25,5 +25,5 @@ const movieSlice = createSlice({
 });
 export default movieSlice.reducer;
 export const { addMoviesToCart, removeMovieFromCart } = movieSlice.actions
-export const selectAllMovies = (state) => state.movies.addedMovies;
+export const selectAllMovies = (state) => state.movies.cartMovies;
 
