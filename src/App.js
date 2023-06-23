@@ -8,9 +8,6 @@ import ContactManager from "./Components/Contacts/ContactManager";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
 import { HomePage } from "./Components/HomePage/HomePage";
-// import Home from './Movies/pages/home/home';
-// import MovieList from './Movies/components/movieList/movieList';
-// import Movie from './Movies/pages/movieDetail/movie';
 import { MoviesManager } from "./Components/Movies/MoviesManager";
 
 
